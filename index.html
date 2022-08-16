@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORLD GENERATOR</title>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/1406/1406240.png" type="image/x-icon">
+    <link rel="stylesheet" media="screen" href="style.css">
+    <link rel="stylesheet" media="print" href="print.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&family=Silkscreen:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@900&family=Roboto+Mono:wght@300;400;700&family=Silkscreen:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+    <h1>Thousand Suns</h1>
+    <h2>World Generation</h2>
+    <button id="generate" onclick="generate()">GENERATE</button>
+    <span class="space"></span>
+    <!--<div class="dices">
+        <div class="dice">
+            <div class="face face1"><span class="d" id="d1">1</span></div>
+        </div>
+        <div class="dice">
+            <div class="face face2"><span class="d" id="d2">12</span></div>
+        </div>
+    </div>-->
+
+    <ul>
+        <li><h4>Primary World Type</h4>
+            <p id="worldType" class = "description"></p>
+            <div class = "result" id="typeResult">
+                <div class="dice" id = "typeDice"></div>
+            </div>
+            <!--<span>( more details )</span>
+            <div class="details">
+                <p>
+                    Dice result : <span id="typeDice"></span>
+                </p>
+            </div>-->
+        </li>
+        <li><h4>World Diameter</h4>
+            <p id="worldDiameter" class = "description"></p>
+            <div class = "result" id="diameterResult">
+            <div class="dice" id="diameterDice"></div>
+            </div>
+            <!--<span>( more details )</span>
+            <div class="details">
+                <p>
+                    Dice result : <span id="diameterDice"></span>
+                </p>
+            </div>-->
+        </li>
+        <li><h4>World Atmospheres</h4>
+            <p id="worldAtmospheres" class = "description"></p>
+            <p class="result">(depend on the world type)</p>
+            <!--<span>( more details )</span>
+            <div class="details">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit beatae, soluta laboriosam minima nobis tempora veniam voluptatum enim delectus sunt necessitatibus dignissimos, quibusdam veritatis. At dicta quis vitae natus aperiam!
+            </div>-->
+        </li>
+        <li><h4>World Climate</h4>
+            <p id="worldClimate" class = "description"></p>
+            <div class="result" id="climateResult">
+                <div class="dice" id="climateDice"></div>
+            </div>
+            <!--<span>( more details )</span>
+            <div class="details">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit beatae, soluta laboriosam minima nobis tempora veniam voluptatum enim delectus sunt necessitatibus dignissimos, quibusdam veritatis. At dicta quis vitae natus aperiam!
+            </div>-->
+        </li>
+        <li><h4>World Hydrographics</h4>
+            <p id="worldHydrographics" class = "description"></p>
+            <div class="result" id="hydrographicseResult">
+                <div class="dice" id="hydrographicsDice"></div>
+            </div>
+            <!--<span>( more details )</span>
+            <div class="details">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit beatae, soluta laboriosam minima nobis tempora veniam voluptatum enim delectus sunt necessitatibus dignissimos, quibusdam veritatis. At dicta quis vitae natus aperiam!
+            </div>-->
+        </li>
+        <li><h4>World Population</h4>
+            <p id="worldPopulation" class = "description"></p>
+            <!--<span>( more details )</span>
+            <div class="details">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit beatae, soluta laboriosam minima nobis tempora veniam voluptatum enim delectus sunt necessitatibus dignissimos, quibusdam veritatis. At dicta quis vitae natus aperiam!
+            </div>-->
+        </li>
+        <li><h4>World Government</h4>
+            <p id="worldGovernment" class = "description"></p>
+            <!--<span>( more details )</span>
+            <div class="details">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit beatae, soluta laboriosam minima nobis tempora veniam voluptatum enim delectus sunt necessitatibus dignissimos, quibusdam veritatis. At dicta quis vitae natus aperiam!
+            </div>-->
+        </li>
+        <li><h4>World Law Level</h4>
+            <p id="worldLawLevel" class = "description"></p>
+            <!--<span>( more details )</span>
+            <div class="details">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit beatae, soluta laboriosam minima nobis tempora veniam voluptatum enim delectus sunt necessitatibus dignissimos, quibusdam veritatis. At dicta quis vitae natus aperiam!
+            </div>-->
+        </li>
+        <li><h4>World Tech Level</h4>
+            <p id="worldTechLevel" class = "description"></p>
+            <!--<span>( more details )</span>
+            <div class="details">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit beatae, soluta laboriosam minima nobis tempora veniam voluptatum enim delectus sunt necessitatibus dignissimos, quibusdam veritatis. At dicta quis vitae natus aperiam!
+            </div>-->
+        </li>
+        <li><h4>World Hooks</h4>
+            <p id="worldHooks" class = "description"></p>
+            <!--<span>( more details )</span>
+            <div class="details">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit beatae, soluta laboriosam minima nobis tempora veniam voluptatum enim delectus sunt necessitatibus dignissimos, quibusdam veritatis. At dicta quis vitae natus aperiam!
+            </div>-->
+        </li>
+    </ul>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
